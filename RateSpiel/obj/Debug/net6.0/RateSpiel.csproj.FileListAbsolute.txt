@@ -1,0 +1,14 @@
+C:\Users\Pascal\source\repos\RateSpiel\bin\Debug\net6.0\RateSpiel.exe
+C:\Users\Pascal\source\repos\RateSpiel\bin\Debug\net6.0\RateSpiel.deps.json
+C:\Users\Pascal\source\repos\RateSpiel\bin\Debug\net6.0\RateSpiel.runtimeconfig.json
+C:\Users\Pascal\source\repos\RateSpiel\bin\Debug\net6.0\RateSpiel.dll
+C:\Users\Pascal\source\repos\RateSpiel\bin\Debug\net6.0\RateSpiel.pdb
+C:\Users\Pascal\source\repos\RateSpiel\obj\Debug\net6.0\RateSpiel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pascal\source\repos\RateSpiel\obj\Debug\net6.0\RateSpiel.AssemblyInfoInputs.cache
+C:\Users\Pascal\source\repos\RateSpiel\obj\Debug\net6.0\RateSpiel.AssemblyInfo.cs
+C:\Users\Pascal\source\repos\RateSpiel\obj\Debug\net6.0\RateSpiel.csproj.CoreCompileInputs.cache
+C:\Users\Pascal\source\repos\RateSpiel\obj\Debug\net6.0\RateSpiel.dll
+C:\Users\Pascal\source\repos\RateSpiel\obj\Debug\net6.0\refint\RateSpiel.dll
+C:\Users\Pascal\source\repos\RateSpiel\obj\Debug\net6.0\RateSpiel.pdb
+C:\Users\Pascal\source\repos\RateSpiel\obj\Debug\net6.0\RateSpiel.genruntimeconfig.cache
+C:\Users\Pascal\source\repos\RateSpiel\obj\Debug\net6.0\ref\RateSpiel.dll
