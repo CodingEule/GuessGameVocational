@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "rSc4bzudAZ/4SHBoYi61wJ2g9pfc43DltElFVnm2Jqd6vmkRLOerJWag0+gueJcjB0m9mGAcnWhE9u7OypZ37A==",
+  "dgSpecHash": "zj40kdb2NvGarc5CfhS8eoY+oc2Aoyj4/TOslRc6Xemg+8qwyWi9PeslEhZaxVqi/iC8CtP5Yk78nNSk/bm1vw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pascal\\source\\repos\\RateSpiel\\RateSpiel.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/pascal/RiderProjects/GuessGameVocational/RateSpiel/RateSpiel.csproj",
+  "expectedPackageFiles": [
+    "/home/pascal/.nuget/packages/microsoft.netcore.app.ref/6.0.8/microsoft.netcore.app.ref.6.0.8.nupkg.sha512",
+    "/home/pascal/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512",
+    "/home/pascal/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.8/microsoft.netcore.app.host.linux-x64.6.0.8.nupkg.sha512"
+  ],
   "logs": []
 }

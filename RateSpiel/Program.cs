@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿
+using System.Numerics;
 using System.Windows.Markup;
 
 namespace RateSpiel
@@ -12,20 +13,21 @@ namespace RateSpiel
             int min;
             int chosenNumber = 0;
             Boolean playAgain = true;
-            Boolean useBinary = false;
 
-            
+
             Console.WriteLine("Ich möchte ein Spiel mit Ihnen spielen!");
             Console.WriteLine("Nenne mir den unteren Grenze: ");
             min = Convert.ToInt32(Console.ReadLine());
+            
             Console.WriteLine("Nenne mir den obere Grenze: ");
             max = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Ich werde mir eine Zahl aussuchen zwischen"+min+" und" + max);
+            
+            Console.WriteLine("Ich werde mir eine Zahl aussuchen zwischen" + min + " und " + max);
             Console.WriteLine("Wie viele versuche möchtest du haben?");
             int maxTry = Convert.ToInt32(Console.ReadLine());
 
 
-            
+
 
 
             while (playAgain)
@@ -37,23 +39,9 @@ namespace RateSpiel
                 Console.WriteLine("Drücke y für ja oder eine andere Taste für nein.");
                 string useBinaryQuestion = Console.ReadLine();
 
-                if ("y".Equals(useBinaryQuestion)){
-                    // call binarySearch return array[0,0, boolean findValue?]
-                    int[] result = binarySearch(maxTry ,randomNumber ,min ,max);
-                    Console.WriteLine(randomNumber);
-                    int valueFound = result[0];
-                    int tries = result[1];
-                    int findRealOne = result[2];
-
-                    if(findRealOne == 0)
-                    {
-                        Console.WriteLine("Leider nicht den richtigen Wert in der in angegebenen Versuchen gefunden");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Der Wert ist " + valueFound + " und ich habe " + tries + "versuche gebraucht um ihn zu finden");
-                    }
-
+                if ("y".Equals(useBinaryQuestion))
+                {
+                    Console.WriteLine(BinarySearch(maxTry, randomNumber, min, max));
                 }
                 else
                 {
@@ -71,7 +59,7 @@ namespace RateSpiel
 
                         if (chosenNumber == 0)
                         {
-                            Console.WriteLine("Bitte gib eine Zahl zwischen " + min + " " + max);
+                            Console.WriteLine("Bitte gib eine Zahl zwischen " + min + " & " + max);
                             continue;
                         }
                         else
@@ -89,7 +77,9 @@ namespace RateSpiel
                                 Console.WriteLine("Du hast gewonnen");
                                 break;
                             }
-                        } counter++;
+                        }
+
+                        counter++;
                         Console.WriteLine(randomNumber);
                     } while (counter < maxTry);
 
@@ -111,41 +101,36 @@ namespace RateSpiel
             }
 
         }
-        static int[] binarySearch(int rounds, int searched, int min, int max)
+
+        static string BinarySearch(int rounds, int searched, int min, int max)
         {
-            int count = 0;
-            int find=-1;
-            int[] values = new int[3];
-
-            while (count != rounds || searched != find)
+            string output ="";
+            int mid;
+            while (rounds != 0)
             {
-                count++;
-
-                int valueSearch = max - min;
-                find = valueSearch / 2;
-                if (find == searched)
+                rounds--;
+                mid = (min + max) /  2;
+                if (searched == mid)
                 {
-                    values[0]= find;
-                    values[1]= count;
-                    values[2] = 1;
-                    return values;
-                }else if(find < searched)
+                    output = "Du hast den Wert gefunden. Er lautet " + mid;
+                    break;
+                }else if(mid < searched)
                 {
-                    min = find +1;
-                    Console.WriteLine(valueSearch);
+                    min = mid + 1 ;
                 }
                 else
                 {
-                    Console.WriteLine(valueSearch);
-                    max = find - 1;
+                    max = mid -  1;
                 }
-                
-            }
-            values[0] = find;
-            values[1] = count;
-            values[2] = 0;
-            return values;
 
+            }
+
+            if (string.IsNullOrEmpty(output))
+            {
+                output = "Leider haben wir den Wert nicht gefunden.";
+            }
+            
+            return output;
         }
     }
 
